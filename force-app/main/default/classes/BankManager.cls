@@ -1,11 +1,11 @@
 // Subtype of BankPerson (Inheritance)
-public class BankCustomer extends BankPerson {
+public class BankManager extends BankPerson {
     // Getters & Setters / Encapsulation
-    public Boolean vip { get; private set; } 
+    private Double salary;
 
-    public BankCustomer(String firstName, String lastName, Date birthDate) {
+    public BankManager(String firstName, String lastName, Date birthDate, Double salary) {
         // Passing parameters from child constructor to parent
         super(firstName, lastName, birthDate);
-        this.vip = false;
+        this.salary = salary;
     }
 }
