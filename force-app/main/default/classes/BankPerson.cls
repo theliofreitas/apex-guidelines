@@ -1,5 +1,4 @@
-// Supertype of BankCustomer (Inheritance)
-// Non-virtual and non-abstract type cannot be extended in Apex
+// Supertype of BankCustomer and BankEmployee (Inheritance)
 public virtual class BankPerson {
     // Getters & Setters / Encapsulation
     private String firstName;
