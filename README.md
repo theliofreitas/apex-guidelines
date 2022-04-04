@@ -9,5 +9,6 @@
     - Use `protected` modifier so the property is visible in any childClass
     - Override parentClass virtual methods
     - Static methods in parentClasses can't be overrided
+    - Abstract/virtual methods
 - Custom exceptions
 - `@TestVisible` annotation to set visibility for test classes
