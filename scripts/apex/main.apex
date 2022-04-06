@@ -79,3 +79,9 @@ System.debug('Account Number: ' + VIPAccount.accountNumber);
 VIPAccount.deposit(500);
 VIPAccount.withdraw(400);
 VIPAccount.increaseLimit(3000);
+
+// Discount
+System.debug('==== Discount Calculator ====');
+Opportunity opp = new Opportunity(Name='Opp 1', Amount=700);
+DiscountCalculator discountCalc = new DiscountCalculator(opp);
+System.debug(discountCalc.getDiscount());

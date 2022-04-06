@@ -10,5 +10,6 @@
     - Override parentClass virtual methods
     - Static methods in parentClasses can't be overrided
     - Abstract/virtual methods
+  - Interfaces & Polymorphism
 - Custom exceptions
 - `@TestVisible` annotation to set visibility for test classes
