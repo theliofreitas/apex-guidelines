@@ -80,8 +80,8 @@ VIPAccount.deposit(500);
 VIPAccount.withdraw(400);
 VIPAccount.increaseLimit(3000);
 
-// Discount
+// Discount Calculator (interface/factory examples)
 System.debug('==== Discount Calculator ====');
-Opportunity opp = new Opportunity(Name='Opp 1', Amount=700);
+Opportunity opp = new Opportunity(Name = 'Opp 1', Amount = 100, Tier__c = 'Gold');
 DiscountCalculator discountCalc = new DiscountCalculator(opp);
 System.debug(discountCalc.getDiscount());

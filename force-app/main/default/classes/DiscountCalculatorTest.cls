@@ -3,9 +3,8 @@ private class DiscountCalculatorTest {
     
     @isTest
     static void testSmallDiscount() {
-        Opportunity opp = new Opportunity(Amount=100);
+        Opportunity opp = new Opportunity(Amount=100, Tier__c='Bronze');
         DiscountCalculator discountCalc = new DiscountCalculator(opp);
-
         Decimal result = discountCalc.getDiscount();
 
         System.assertEquals(95, result);
@@ -13,21 +12,19 @@ private class DiscountCalculatorTest {
 
     @isTest
     static void testStandardDiscount() {
-        Opportunity opp = new Opportunity(Amount=600);
+        Opportunity opp = new Opportunity(Amount=100, Tier__c='Silver');
         DiscountCalculator discountCalc = new DiscountCalculator(opp);
-
         Decimal result = discountCalc.getDiscount();
 
-        System.assertEquals(450, result);
+        System.assertEquals(90, result);
     }
 
     @isTest
     static void testBigDiscount() {
-        Opportunity opp = new Opportunity(Amount=1000);
+        Opportunity opp = new Opportunity(Amount=100, Tier__c='Gold');
         DiscountCalculator discountCalc = new DiscountCalculator(opp);
-
         Decimal result = discountCalc.getDiscount();
 
-        System.assertEquals(500, result);
+        System.assertEquals(85, result);
     }
 }

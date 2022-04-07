@@ -11,5 +11,6 @@
     - Static methods in parentClasses can't be overrided
     - Abstract/virtual methods
   - Interfaces & Polymorphism
+  - Factory & Reflection pattern
 - Custom exceptions
 - `@TestVisible` annotation to set visibility for test classes

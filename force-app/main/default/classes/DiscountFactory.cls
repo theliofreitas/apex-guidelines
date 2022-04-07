@@ -1,14 +1,12 @@
 public class DiscountFactory {
 
-    public static IDiscount getDiscount(Decimal amount) {
-        if (amount >= 1000) {
-            return new BigDiscount();
-        }
-        else if (amount >= 500) {
-            return new StandardDiscount();
-        }
-        else {
-            return new SmallDiscount();
-        }
+    public static IDiscount getDiscountInstance(String tier) {
+        Discount_Setting__mdt discountSett = [SELECT Class_to_Instantiate__c FROM Discount_Setting__mdt
+                                              WHERE Tier__c = :tier];
+        
+        Type t = Type.forName(discountSett.Class_to_Instantiate__c);
+        IDiscount discountInstance = (IDiscount)t.newInstance();
+
+        return discountInstance;
     }
 }

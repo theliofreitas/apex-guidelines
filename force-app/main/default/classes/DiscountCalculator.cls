@@ -4,11 +4,11 @@ public class DiscountCalculator {
 
     public DiscountCalculator(Opportunity opp) {
         this.opp = opp;
-        this.discount = DiscountFactory.getDiscount(opp.Amount);
+        this.discount = DiscountFactory.getDiscountInstance(opp.Tier__c);
     }
 
     public Decimal getDiscount() {
-        Decimal result = discount.calculateDiscount(this.opp.Amount);
+        Decimal result = discount.calculateDiscount(opp.Amount);
         return result;
     }
 }
